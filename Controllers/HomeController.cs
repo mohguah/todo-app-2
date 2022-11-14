@@ -1,11 +1,14 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using TodoApp2.Models;
+using System.Data.SQLite;
+using System.Data.SQLite.Generic;
 
 namespace TodoApp2.Controllers;
 
 public class HomeController : Controller
 {
+
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
@@ -18,14 +21,24 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public void Insert(Todo todo)
     {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        using (var connection =
+            new SQLiteConnection("Data Source=db.sqlite"))
+        {
+            using (var tableCmd = connection.CreateCommand())
+            {
+                connection.Open();
+                tableCmd.CommandText = $"INSERT INTO Todo (name) VALUES ('{todo.Name}')";
+                try
+                {
+                    tableCmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
     }
 }

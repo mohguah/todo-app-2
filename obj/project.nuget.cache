@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "wt8PzXad8GzUxBETPJeBdWpXErflreBZ3kUf+yE4pM42Z1fdZK0tIj17XWywB5myOhuqGEb+g2Lf8iQHrSVRgg==",
+  "dgSpecHash": "WM8emZozjkQRRpmkyo93kcn86a65LaiCoXSXY8+yytfg/7AR7UcSqpFvfliwqaPsUO0K3SdBZgHjweQF4Bl22g==",
   "success": true,
   "projectFilePath": "C:\\Users\\simon\\Prosjekter\\NET\\TodoApp2\\TodoApp2.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\simon\\.nuget\\packages\\microsoft.data.sqlite\\7.0.0\\microsoft.data.sqlite.7.0.0.nupkg.sha512",
+    "C:\\Users\\simon\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.0\\microsoft.data.sqlite.core.7.0.0.nupkg.sha512",
+    "C:\\Users\\simon\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.2\\sqlitepclraw.bundle_e_sqlite3.2.1.2.nupkg.sha512",
+    "C:\\Users\\simon\\.nuget\\packages\\sqlitepclraw.core\\2.1.2\\sqlitepclraw.core.2.1.2.nupkg.sha512",
+    "C:\\Users\\simon\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.2\\sqlitepclraw.lib.e_sqlite3.2.1.2.nupkg.sha512",
+    "C:\\Users\\simon\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.2\\sqlitepclraw.provider.e_sqlite3.2.1.2.nupkg.sha512",
+    "C:\\Users\\simon\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }
